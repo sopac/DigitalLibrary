@@ -44,7 +44,11 @@ class KeywordController {
         list.remove("eye")
         list << "geo eye"
         list.remove("pan")
-        list << "pan mapping"
+        //list << "pan mapping"
+        list.remove("sharpened")
+        list << "pan-sharpened"
+        list.remove("multi")
+        list << "multi-spectral"
 
         return list.unique()
     }

@@ -166,13 +166,34 @@
         </tr>
 
         <tr class="prop">
-            <td valign="top" class="name"></td>
+            <td valign="center" class="name">
+                <!-- Button to trigger modal -->
+                <a href="#myModal" role="button" style="margin-top: 60px" class="btn" data-toggle="modal">
+                    <g:message default="Preview Publication Text" code="preview_publication_text"></g:message>
+                </a>
+                <!-- Modal -->
+                <div id="myModal" class="modal hide fade" style="width: 700px; height: 600px" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 
-            <td valign="top" class="value">
+                        <h3 id="myModalLabel">${publicationInstance.title}</h3>
+                    </div>
+
+                    <div class="modal-body">
+                        <p>${digitallibrary.PublicationText.findWhere(publicationId: publicationInstance.id).text.encodeAsHTML()}</p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                    </div>
+                </div>
+            </td>
+
+            <td valign="center" class="value">
 
                 <g:form controller="download">
                     <g:hiddenField name="id" value="${publicationInstance.id}"></g:hiddenField>
-                    <g:actionSubmitImage style="height: 110px !important; margin-top: 30px" align="left" value="Download" action="index" src="${resource(dir: 'images', file: 'download.jpg')}"/>
+                    <g:actionSubmitImage style="height: 110px !important; margin-top: 30px; margin-left: 120px" align="left" value="Download" action="index" src="${resource(dir: 'images', file: 'download.jpg')}"/>
                 </g:form>
 
                 <a href="#" onclick="alert('Sorry, eBook is not available for this publication.')">
@@ -184,6 +205,7 @@
 
         </tbody>
     </table>
+
 </section>
 
 </body>

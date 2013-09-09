@@ -12,7 +12,7 @@
     <file path="/_header.gsp" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378076957505" ignored="false" />
     <file path="/application.properties" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378074023244" ignored="false" />
     <file path="/messages.properties" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378698086383" ignored="false" />
-    <file path="/messages_fr.properties" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378700840726" ignored="false" />
+    <file path="/messages_fr.properties" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378704575461" ignored="false" />
     <file path="/_navbar.gsp" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378077590273" ignored="false" />
     <file path="/_footer.gsp" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378078133861" ignored="false" />
     <file path="/kickstart.gsp" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378355713683" ignored="false" />
@@ -31,7 +31,7 @@
     <file path="/Analog.groovy" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378269466295" ignored="false" />
     <file path="/Global.java" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378630451823" ignored="false" />
     <file path="/list.gsp" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378698136842" ignored="false" />
-    <file path="/show.gsp" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378701499598" ignored="false" />
+    <file path="/show.gsp" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378704849509" ignored="false" />
     <file path="/notes.txt" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378682288617" ignored="false" />
     <file path="/reset.less" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378350228634" ignored="false" />
     <file path="/bootstrap.less" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378350382776" ignored="false" />
@@ -49,13 +49,12 @@
     <file path="/CheckController.groovy" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378685631454" ignored="false" />
     <file path="$PROJECT_DIR$/test/unit/digitallibrary/PublicationTextControllerTests.groovy" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378426924578" ignored="false" />
     <file path="$PROJECT_DIR$/test/unit/digitallibrary/DownloadControllerTests.groovy" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378439394269" ignored="false" />
-    <file path="$PROJECT_DIR$/web-app/less/bootstrap/variables.less" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378630493652" ignored="false" />
     <file path="$USER_HOME$/.grails/2.2.4/projects/DigitalLibrary/plugins/kickstart-with-bootstrap-0.9.6/web-app/less/bootstrap/variables.less" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378630493653" ignored="false" />
     <file path="$USER_HOME$/.grails/2.2.4/projects/DigitalLibrary/plugins/database-migration-1.3.2/grails-app/views/dbdoc/_index.gsp" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378630493653" ignored="false" />
     <file path="/DownloadController.groovy" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378675726256" ignored="false" />
     <file path="/SearchableController.groovy" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378696688799" ignored="false" />
     <file path="$PROJECT_DIR$/test/unit/digitallibrary/KeywordControllerTests.groovy" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378684983491" ignored="false" />
-    <file path="/KeywordController.groovy" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378693365558" ignored="false" />
+    <file path="/KeywordController.groovy" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378702316759" ignored="false" />
     <file path="/PublicationController.groovy" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378691907902" ignored="false" />
     <file path="/en_list.gsp" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378692448732" ignored="false" />
     <file path="/fr_list.gsp" changelist="6c180e33-d261-4973-bc97-c6d99f5e23d4" time="1378692275157" ignored="false" />
@@ -126,7 +125,7 @@
       <file leaf-file-name="messages_fr.properties" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/i18n/messages_fr.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="25" selection-start="2258" selection-end="2258" vertical-scroll-proportion="-12.5">
+            <state line="47" column="25" selection-start="2807" selection-end="2807" vertical-scroll-proportion="-16.714285">
               <folding />
             </state>
           </provider>
@@ -147,11 +146,33 @@
       <file leaf-file-name="show.gsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/views/publication/show.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="20" selection-start="2999" selection-end="2999" vertical-scroll-proportion="0.8752228">
+            <state line="182" column="128" selection-start="7414" selection-end="7414" vertical-scroll-proportion="0.61497325">
               <folding>
-                <marker date="1378701501529" expanded="true" signature="6721:6763" placeholder="{...}" />
-                <marker date="1378701501529" expanded="true" signature="7042:7067" placeholder="{...}" />
+                <marker date="1378704852866" expanded="true" signature="6866:6893" placeholder="{...}" />
+                <marker date="1378704852866" expanded="true" signature="7902:7964" placeholder="{...}" />
+                <marker date="1378704852866" expanded="true" signature="8243:8268" placeholder="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PublicationText.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/digitallibrary/PublicationText.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="6" selection-start="134" selection-end="134" vertical-scroll-proportion="-2.0769231">
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KeywordController.groovy" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/digitallibrary/KeywordController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="50" column="31" selection-start="1281" selection-end="1281" vertical-scroll-proportion="-19.791666">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -166,7 +187,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/controllers/digitallibrary/AuthorController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/digitallibrary/SearchableController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/author/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/category/list.gsp" />
@@ -179,8 +199,9 @@
         <option value="$PROJECT_DIR$/grails-app/views/category/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/division/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/_menu/_info.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/i18n/messages_fr.properties" />
         <option value="$PROJECT_DIR$/grails-app/views/contact/index.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/digitallibrary/KeywordController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/i18n/messages_fr.properties" />
         <option value="$PROJECT_DIR$/grails-app/views/publication/show.gsp" />
       </list>
     </option>
@@ -287,6 +308,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DigitalLibrary" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DigitalLibrary" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1092,23 +1131,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/views/searchable/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="73" selection-start="1146" selection-end="1146" vertical-scroll-proportion="-2.1176472">
-          <folding>
-            <marker date="1378697542126" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1378697542126" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/keyword/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="113" selection-start="1013" selection-end="1013" vertical-scroll-proportion="-6.352941">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/i18n/messages.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="33" selection-start="1818" selection-end="1818" vertical-scroll-proportion="-14.785714">
@@ -1185,16 +1207,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/i18n/messages_fr.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="25" selection-start="2258" selection-end="2258" vertical-scroll-proportion="-12.5">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/division/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="51" column="96" selection-start="1708" selection-end="1708" vertical-scroll-proportion="1.402439">
@@ -1209,12 +1221,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/digitallibrary/KeywordController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="31" selection-start="1281" selection-end="1281" vertical-scroll-proportion="-19.791666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/digitallibrary/PublicationText.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="6" selection-start="134" selection-end="134" vertical-scroll-proportion="-2.0769231">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/i18n/messages_fr.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="25" selection-start="2807" selection-end="2807" vertical-scroll-proportion="-16.714285">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/publication/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="20" selection-start="2999" selection-end="2999" vertical-scroll-proportion="0.8752228">
+        <state line="182" column="128" selection-start="7414" selection-end="7414" vertical-scroll-proportion="0.61497325">
           <folding>
-            <marker date="1378701501529" expanded="true" signature="6721:6763" placeholder="{...}" />
-            <marker date="1378701501529" expanded="true" signature="7042:7067" placeholder="{...}" />
+            <marker date="1378704852866" expanded="true" signature="6866:6893" placeholder="{...}" />
+            <marker date="1378704852866" expanded="true" signature="7902:7964" placeholder="{...}" />
+            <marker date="1378704852866" expanded="true" signature="8243:8268" placeholder="{...}" />
           </folding>
         </state>
       </provider>
