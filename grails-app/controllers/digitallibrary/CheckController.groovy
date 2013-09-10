@@ -9,33 +9,48 @@ class CheckController {
     //static scaffold = true
     def index = {
 
-        def list = []
+        //check existing ebooks
+        render "<h1 style='color: blue'>Status Check</h1>"
+        render "<h3>Existing Ebooks</h3>"
+        int count = 0
+        Publication.listOrderByFileName().each { p ->
+            String fn = p.fileName.substring(0, p.fileName.lastIndexOf(".")).trim()
 
-        String invalid = new URL("http://ict.sopac.org/commonwords.txt").getText()
-
-        def termFreqs = PublicationText.termFreqs(size: 100)
-        termFreqs.each {
-            boolean v = true
-            String t = it.term.toString().trim()
-            if (t.length() < 3) v = false
-            if (t.isNumber()) v = false
-            invalid.eachLine {
-                if (t.equals(it.trim())) v = false
-            }
+            //render fn + "<br/>"
+            String url = Global.ebookURL + fn.encodeAsURL() + "/index.html"
 
 
+            println url
 
-            if (v) {
-                render "<b>${it.term}</b> occurs ${it.freq} times in the index for Book instances"
+            if (Global.exists(url)) {
+                String link = createLink(controller: 'publication', action: 'show', id: p.id)
+                render "<a href='${link}'>${p.title}</a>"
                 render "<br/>"
-                list << it.term
+                count++
             }
 
         }
 
-        render "Finished"
+        render "<br/><b>Total : </b>" + count.toString() + "<hr/>"
 
-        //missing books
+        //missing thumbnails
+
+        render "<h3>Missing Thumbnails</h3>"
+        count = 0
+        Publication.listOrderByTitle().each { p ->
+            String url = digitallibrary.Global.thumbURL + p.fileName.replace('.pdf', '.jpg')
+            if (!Global.exists(url)) {
+                String link = createLink(controller: 'publication', action: 'show', id: p.id)
+                render "<a href='${link}'>${p.title}</a>"
+                render "<br/>"
+                count++
+            }
+        }
+        render "<br/><b>Total : </b>" + count.toString() + "<hr/>"
+
 
     }
+
 }
+
+

@@ -16,6 +16,7 @@
             </a>
 
             <div class="nav-collapse">
+%{--
 
                 <ul class="nav">
                     <li class="dropdown">
@@ -38,6 +39,7 @@
                     </li>
                 </ul>
 
+--}%
                 <div class="pull-left">
                     <%--Left-side entries--%>
                 </div>

@@ -18,7 +18,9 @@ class KeywordController {
     def List getList() {
         def list = []
 
-        String invalid = new URL("http://ict.sopac.org/commonwords.txt").getText()
+        //String invalid = new URL("http://ict.sopac.org/commonwords.txt").getText()
+
+        String invalid = new File("/opt/dl/commonwords.txt").getText()
 
         def termFreqs = Publication.termFreqs("title", size: 120)
         termFreqs.each {

@@ -6,6 +6,17 @@ package digitallibrary
  */
 class DownloadController {
 
+    def ebook = {
+        String fn = params.fileName.substring(0, params.fileName.lastIndexOf(".")).trim()
+        String url = Global.ebookURL + fn.encodeAsURL() + "/index.html"
+        if (Global.exists(url)) {
+            redirect(url: url)
+        } else {
+            flash.message = message(code: 'no_ebook', default: 'Sorry, eBook version does not exist for this publication yet. Please check back later.')
+            redirect(controller: 'publication', action: 'show', id: params.id)
+        }
+    }
+
     //static scaffold = true
     def index = {
         String fn = Publication.get(params.id).fileName

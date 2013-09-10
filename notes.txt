@@ -42,10 +42,12 @@ French UI
 
 Preview - Show PublicationText in Popup
 
-Ebook
+Ebook (in frame) DownloadController/ebook AND in Publication Show action - return hasEbook?
+Category French Name Implementation
+
+Document Email Link
 
 Adv. Search Page
-
 
 Keyword Extraction (from Searchable Plugin)
 Keywords Tab (via Searchable termgreqs) from PublicationText

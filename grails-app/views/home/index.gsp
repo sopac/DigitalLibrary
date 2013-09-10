@@ -1,14 +1,42 @@
 <%@ page import="digitallibrary.Global" %>
-<html>
+<%@ page import="org.springframework.web.servlet.support.RequestContextUtils" %>
 
+<html>
 <head>
 
     <title><g:message code="default.welcome.title" args="[meta(name: 'app.name')]"/></title>
     <meta name="layout" content="kickstart"/>
+    %{--
+            <link href="http://getbootstrap.com/examples/carousel/carousel.css" rel="stylesheet">
+    --}%
+
+    <script>
+        $('#myCarousel').carousel({
+            interval: 1200
+        });
+    </script>
+
+    <style>
+    .carousel-indicators .active {
+        margin: 0;
+        background-color: black;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
+    .carousel-indicators li {
+        margin: 0;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+    </style>
 
 </head>
 
 <body>
+
+<g:set var="lang" value="${org.springframework.web.servlet.support.RequestContextUtils.getLocale(request).toString()}"></g:set>
 
 <section id="intro" class="first">
 
@@ -20,20 +48,23 @@
 
 <div align="center">
     <g:form controller="searchable">
-    <g:textField style="width: 420px; height: 34px; font-size: 18px" name="q"/>
-    <br/>
-    <g:link class="btn btn-large btn-primary" style="font-size: 12px !important;"
-            controller="searchable"><g:message code="search"></g:message></g:link>
+        <g:textField style="width: 420px; height: 34px; font-size: 18px" name="q"/>
+        <br/>
+        <g:link class="btn btn-large btn-primary" style="font-size: 12px !important;"
+                controller="searchable"><g:message code="search"></g:message></g:link>
     </g:form>
 </div>
 
+
 <p align="justify">
     <g:message code="intro"/>
-   <a href="mailto:pubs@spc.int">pubs@spc.int</a>
+    <a href="mailto:pubs@spc.int">pubs@spc.int</a>
 </p>
 
+
+
 <div align="center">
-    <h3 style="background-color: #0088cc; color: white"><g:message code="featured_publications" /></h3>
+    <h3 style="background-color: #0088cc; color: white"><g:message code="featured_publications"/></h3>
 
     <div id="myCarousel" class="carousel slide" data-interval="2000">
         <!-- Indicators -->
@@ -154,7 +185,12 @@
             <g:each var="c" in="${digitallibrary.Category.list()}">
                 <p align="center">
                     <a href="${createLink(controller: 'category', action: 'show', id: c.id)}">
-                        <b>${c.category}</b>
+                        <g:if test="${lang.equals("fr")}">
+                            <b>${c.frenchCategory}</b>
+                        </g:if>
+                        <g:else>
+                            <b>${c.category}</b>
+                        </g:else>
                     </a>
                     <br/>
                     ${digitallibrary.Publication.findAllWhere(category: c).size()} Publications
@@ -168,44 +204,44 @@
             <div class="center">
                 <h3><g:message code="statistics"></g:message></h3>
             </div>
-                <table style="width: 100%; margin-left: 40px" cellpadding="10">
-                    <tr>
-                        <td style="width: 60%">Total Publications</td>
-                        <td style="width: 40%; font-style: italic">${digitallibrary.Publication.getAll().size()}</td>
-                    </tr>
-                    <tr>
-                        <td>English Publications</td>
-                        <td style="font-style: italic">${digitallibrary.Publication.findAllByLanguage("EN").size()}</td>
-                    </tr>
-                    <tr>
-                        <td>Publications Françaises</td>
-                        <td style="font-style: italic">${digitallibrary.Publication.findAllByLanguage("FR").size()}</td>
-                    </tr>
-                    <tr>
-                        <td>2013 Publications</td>
-                        <td style="font-style: italic">${digitallibrary.Publication.findAllByPublishedYear(2013).size()}</td>
-                    </tr>
-                    <tr>
-                        <td>2012 Publications</td>
-                        <td style="font-style: italic">${digitallibrary.Publication.findAllByPublishedYear(2012).size()}</td>
-                    </tr>
-                    <tr>
-                        <td>2011 Publications</td>
-                        <td style="font-style: italic">${digitallibrary.Publication.findAllByPublishedYear(2011).size()}</td>
-                    </tr>
-                    <tr>
-                        <td>2010 Publications</td>
-                        <td style="font-style: italic">${digitallibrary.Publication.findAllByPublishedYear(2010).size()}</td>
-                    </tr>
-                    <tr>
-                        <td>2009 Publications</td>
-                        <td style="font-style: italic">${digitallibrary.Publication.findAllByPublishedYear(2009).size()}</td>
-                    </tr>
-                    <tr>
-                        <td>2008 Publications</td>
-                        <td style="font-style: italic">${digitallibrary.Publication.findAllByPublishedYear(2008).size()}</td>
-                    </tr>
-                </table>
+            <table style="width: 100%; margin-left: 40px" cellpadding="10">
+                <tr>
+                    <td style="width: 60%">Total Publications</td>
+                    <td style="width: 40%; font-style: italic">${digitallibrary.Publication.getAll().size()}</td>
+                </tr>
+                <tr>
+                    <td>English Publications</td>
+                    <td style="font-style: italic">${digitallibrary.Publication.findAllByLanguage("EN").size()}</td>
+                </tr>
+                <tr>
+                    <td>Publications Françaises</td>
+                    <td style="font-style: italic">${digitallibrary.Publication.findAllByLanguage("FR").size()}</td>
+                </tr>
+                <tr>
+                    <td>2013 Publications</td>
+                    <td style="font-style: italic">${digitallibrary.Publication.findAllByPublishedYear(2013).size()}</td>
+                </tr>
+                <tr>
+                    <td>2012 Publications</td>
+                    <td style="font-style: italic">${digitallibrary.Publication.findAllByPublishedYear(2012).size()}</td>
+                </tr>
+                <tr>
+                    <td>2011 Publications</td>
+                    <td style="font-style: italic">${digitallibrary.Publication.findAllByPublishedYear(2011).size()}</td>
+                </tr>
+                <tr>
+                    <td>2010 Publications</td>
+                    <td style="font-style: italic">${digitallibrary.Publication.findAllByPublishedYear(2010).size()}</td>
+                </tr>
+                <tr>
+                    <td>2009 Publications</td>
+                    <td style="font-style: italic">${digitallibrary.Publication.findAllByPublishedYear(2009).size()}</td>
+                </tr>
+                <tr>
+                    <td>2008 Publications</td>
+                    <td style="font-style: italic">${digitallibrary.Publication.findAllByPublishedYear(2008).size()}</td>
+                </tr>
+            </table>
 
 
 
