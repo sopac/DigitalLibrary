@@ -196,7 +196,7 @@
                 </div>
 
                 <div class="modal-body">
-                    <p>${digitallibrary.PublicationText.findWhere(publicationId: publicationInstance.id).text.encodeAsHTML()}</p>
+                    <p>${digitallibrary.PublicationText.findWhere(publicationId: publicationInstance.id).text.replaceAll("\n", "<br/>")}</p>
                 </div>
 
                 <div class="modal-footer">

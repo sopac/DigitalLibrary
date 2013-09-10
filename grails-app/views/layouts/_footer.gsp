@@ -1,7 +1,7 @@
 <footer class="footer">
 	<div class="container">
 
-		<h4>Disclaimer</h4>
+		<h4><g:message default="Disclaimer" code="disclaimer"/></h4>
 		<p align="justify"><g:message code="disclaimer1"/></p>
         <p align="justify"><g:message code="disclaimer2"/></p>
 
